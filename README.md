@@ -1,60 +1,58 @@
-# 🚢 Neurofive ML Track - Week 1
+# 🚢 Neurofive ML Track
 
-## 📊 Titanic Dataset - Exploratory Data Analysis (EDA)
-
-This project is part of the **Neurofive Machine Learning Track**, where I performed Exploratory Data Analysis (EDA) on the famous Titanic dataset.
+This repository contains my work from the **Neurofive Machine Learning Track**, where I am learning and applying core ML concepts step by step.
 
 ---
+
+# 📊 Week 1: Exploratory Data Analysis (EDA)
 
 ## 🔍 What I Did
-
-- Loaded and explored the dataset using **Pandas**
-- Analyzed data using `.head()`, `.info()`, `.describe()`
-- Identified and handled **missing values**
-- Classified **categorical and numerical features**
-- Performed **data visualization** (histograms, bar plots, heatmaps)
-- Discovered patterns and relationships between features
-- Summarized findings in a clear and simple way
-
----
+- Explored dataset using Pandas
+- Handled missing values
+- Identified categorical & numerical features
+- Created visualizations (histograms, bar plots, heatmaps)
+- Found patterns in data
 
 ## 🧠 Key Insights
-
-- **Gender had the biggest impact on survival**  
-  Females were much more likely to survive than males.
-
-- **Passenger class mattered**  
-  People in higher classes (1st class) had better survival chances than those in lower classes.
-
-- **Fare also played a role**  
-  Passengers who paid higher ticket prices were more likely to survive.
-
-- **Age had less impact**  
-  Most passengers were young adults, and age was not a strong factor.
-
-- **Family presence had a small effect**  
-  Traveling with family slightly influenced survival.
+- Gender had the biggest impact on survival
+- Higher class passengers had better survival chances
+- Higher fare increased survival probability
+- Age had less impact
+- Family presence had a small effect
 
 ---
 
-## ✅ Conclusion
+# 🤖 Week 2: Titanic Survival Prediction (Machine Learning)
 
-- Data cleaning improved the accuracy of the analysis.
-- Visualizations helped in understanding patterns easily.
-- The most important factor for survival was **gender**, followed by **passenger class and fare**.
-- This project shows how EDA helps uncover meaningful insights before building machine learning models.
+## ⚙️ What I Did
+- Cleaned dataset (handled missing values)
+- Encoded categorical variables
+- Split data into training and testing sets
+- Trained a **Logistic Regression model**
+- Evaluated using accuracy & confusion matrix
+
+## 📊 Results
+- Model achieved good accuracy in predicting survival
+- Confusion matrix showed both correct predictions and errors
+
+## 🧠 Key Learning
+- Learned complete ML workflow:
+  **Data Cleaning → Feature Engineering → Model Training → Evaluation**
+- Understood how models make predictions from patterns in data
 
 ---
 
 ## 📁 Files
-
-- `Titanic EDA.ipynb` → Main notebook
+- `Titanic EDA.ipynb` → Week 1
+- `titanic_week2_ml.ipynb` → Week 2
 
 ---
 
 ## 📌 Dataset
-
 Titanic - Machine Learning from Disaster (Kaggle):  
 https://www.kaggle.com/competitions/titanic/data
 
--
+---
+
+## 🚀 Author
+**Ali Haider**
