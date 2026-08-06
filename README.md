@@ -57,8 +57,4 @@ This project is part of the **Neurofive Machine Learning Track**, where I perfor
 Titanic - Machine Learning from Disaster (Kaggle):  
 https://www.kaggle.com/competitions/titanic/data
 
----
-
-## 🚀 Author
-
-**Ali Haider**
+-
