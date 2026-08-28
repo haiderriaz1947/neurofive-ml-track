@@ -2,7 +2,7 @@
 
 This repository contains my work from the **NeuroFive Machine Learning Track**, where I am building my Machine Learning skills through practical, real-world projects.
 
-The journey started with understanding data, moved into predictive modeling, and is now expanding into solving real **business problems with Machine Learning** and deploying models as usable applications.
+The journey started with understanding data, moved into predictive modeling, and progressed toward solving real **business and environmental problems with Machine Learning**, building professional ML pipelines, handling messy data, and deploying models as usable applications.
 
 ---
 
@@ -105,6 +105,8 @@ The findings can help businesses think about:
 # 🛠️ Week 4: ML Pipelines & Ensemble Learning
 
 Week 4 focused on moving from basic notebook-based modeling toward **cleaner, reusable and more professional Machine Learning workflows**.
+
+---
 
 ## 🔧 Task 1: ML Pipeline with Feature Engineering
 
@@ -224,24 +226,126 @@ I developed a **Streamlit web application** for the Customer Churn prediction mo
 
 ---
 
-# 📈 My ML Learning Journey
+# 🌫️ Week 6: Capstone — End-to-End Machine Learning Project
+
+Week 6 was the **capstone project**, where I applied the complete Machine Learning workflow to a real-world environmental problem: **predicting Lahore's next-day Air Quality Index (AQI).**
+
+## 💡 Project: Lahore Next-Day AQI Prediction
+
+### 🎯 Problem
+
+Lahore regularly experiences poor air quality, particularly during the winter smog season. Poor AQI can affect outdoor activities, schools, hospitals, workplaces, and daily planning.
+
+Most AQI information tells people about the air quality **today**, but there is value in knowing what conditions may look like **tomorrow**.
+
+The goal of this project was to build an end-to-end Machine Learning solution capable of predicting **next-day AQI** using weather conditions, environmental factors, and recent AQI history.
+
+---
+
+## 📊 Dataset
+
+The project uses a daily Lahore AQI dataset containing environmental and weather-related information.
+
+### Main Features
+
+- `date`
+- `temperature_c`
+- `humidity_pct`
+- `wind_speed_kmh`
+- `rainfall_mm`
+- `crop_burning_index`
+- `aqi`
+
+Additional features were engineered during the Machine Learning workflow to capture seasonal patterns and recent AQI behavior.
+
+---
+
+## 🔍 What I Did
+
+- Defined the AQI prediction problem
+- Prepared and cleaned the dataset
+- Checked missing values and data quality
+- Performed Exploratory Data Analysis
+- Analyzed AQI trends over time
+- Investigated seasonal patterns
+- Studied relationships between weather variables and AQI
+- Created feature-engineering transformations
+- Created seasonal features
+- Created cyclical month features
+- Created weekend and winter indicators
+- Created historical AQI lag features
+- Used a time-based train/test split
+- Trained multiple regression models
+- Evaluated model performance
+- Selected the best-performing model
+- Saved the final model using **Joblib**
+- Built a **Streamlit web application**
+- Deployed the application online
+
+---
+
+## 🧠 Feature Engineering
+
+To improve the model's ability to learn temporal and environmental patterns, I created additional features such as:
+
+- Month-based seasonal features
+- Cyclical month encoding
+- Weekend indicator
+- Winter indicator
+- Previous-day AQI
+- AQI from 7 days ago
+- Rolling 7-day AQI average
+
+These features help the model capture both **seasonality** and **recent AQI behavior**.
+
+---
+
+## 🤖 Models Trained
+
+I trained and compared multiple regression models:
+
+| Model | Type |
+|---|---|
+| Linear Regression | Baseline Regression |
+| Ridge Regression | Regularized Regression |
+| Random Forest | Ensemble Model |
+| Gradient Boosting | Ensemble Model |
+
+### 📏 Evaluation Metrics
+
+The models were evaluated using:
+
+- **RMSE** — Root Mean Squared Error
+- **MAE** — Mean Absolute Error
+- **R²** — Coefficient of Determination
+
+The best-performing model was selected based on the evaluation results and saved for deployment.
+
+---
+
+## 🔄 End-to-End ML Workflow
 
 ```text
-Week 1
-📊 Understanding Data
-       ↓
-Week 2
-🤖 Building My First ML Model
-       ↓
-Week 3
-💼 Solving a Real Business Problem
-       ↓
-Week 4
-🛠️ Building Professional ML Pipelines
-🌲 Exploring Ensemble Learning
-       ↓
-Week 5
-⚖️ Handling Imbalanced Data
-🌐 Deploying ML as a Web App
-       ↓
-🚀 More ML Projects Ahead
+Problem Definition
+        ↓
+Data Collection
+        ↓
+Data Cleaning
+        ↓
+Exploratory Data Analysis
+        ↓
+Feature Engineering
+        ↓
+Time-Based Train/Test Split
+        ↓
+Train Multiple Models
+        ↓
+Model Evaluation
+        ↓
+Select Best Model
+        ↓
+Save Model with Joblib
+        ↓
+Build Streamlit Application
+        ↓
+Deploy Application
