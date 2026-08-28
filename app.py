@@ -62,6 +62,9 @@ if load_error:
 
 # Sanity check: warn if the input form won't match what the pipeline expects.
 expected_cols = getattr(model, "feature_names_in_", None)
+if expected_cols is not None:
+    with st.expander("🔍 Columns this model expects (debug info)"):
+        st.write(list(expected_cols))
 
 # --------------------------------------------------------------------------------
 # Input form
@@ -150,6 +153,25 @@ if submitted:
         "MonthlyCharges": monthly_charges,
         "TotalCharges": total_charges,
     }
+
+    # --- Engineered features (added by churn_pipeline_feature_engineering.ipynb) ---
+    # NOTE: these formulas are best-guess reconstructions. Verify against your
+    # notebook's actual feature-engineering code and adjust if they differ.
+    service_cols_yes = [
+        phone_service, multiple_lines, online_security, online_backup,
+        device_protection, tech_support, streaming_tv, streaming_movies,
+    ]
+    num_services = sum(1 for v in service_cols_yes if v == "Yes")
+    if internet_service != "No":
+        num_services += 1
+    input_dict["NumServices"] = num_services
+
+    input_dict["AvgMonthlyCharge"] = (
+        total_charges / tenure if tenure > 0 else monthly_charges
+    )
+
+    input_dict["IsNewCustomer"] = 1 if tenure <= 6 else 0
+    # ---------------------------------------------------------------------------
 
     input_df = pd.DataFrame([input_dict])
 
