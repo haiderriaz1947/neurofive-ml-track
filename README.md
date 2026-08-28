@@ -108,18 +108,21 @@ Week 4 focused on moving from basic notebook-based modeling toward **cleaner, re
 
 ## 🔧 Task 1: ML Pipeline with Feature Engineering
 
-Built a proper **scikit-learn Pipeline** using `ColumnTransformer` to combine preprocessing and modeling into a single reusable workflow.
+Built a proper **Scikit-learn Pipeline** using `ColumnTransformer` to combine preprocessing and modeling into a single reusable workflow.
 
-### What I Did
+### 🔍 What I Did
 
 - Applied **StandardScaler** to numerical features
 - Applied **OneHotEncoder** to categorical features
 - Combined preprocessing and the ML model into one Pipeline
-- Added **feature engineering** with new customer-level features
+- Created **2+ engineered features**
+- Tested whether feature engineering improved model performance
 - Evaluated the pipeline against the earlier manual approach
-- Saved the final trained pipeline using **joblib**
+- Saved the final trained pipeline using **Joblib**
 
-📓 **Notebook:** [Churn Pipeline & Feature Engineering](https://github.com/haiderriaz1947/neurofive-ml-track/blob/main/churn_pipeline_feature_engineering.ipynb)
+📓 **Notebook:**
+
+[Churn Pipeline & Feature Engineering](https://github.com/haiderriaz1947/neurofive-ml-track/blob/main/churn_pipeline_feature_engineering.ipynb)
 
 ### 📌 Key Learning
 
@@ -131,20 +134,27 @@ Built a proper **scikit-learn Pipeline** using `ColumnTransformer` to combine pr
 
 The second Week 4 task explored **ensemble learning**, comparing powerful tree-based ensemble methods with earlier single-model approaches.
 
-### What I Did
+### 🔍 What I Did
 
 - Trained a **Random Forest Classifier**
 - Trained an **XGBoost Classifier**
 - Compared ensemble models with earlier Logistic Regression / Decision Tree models
-- Analyzed and plotted **feature importances** for both ensemble models
+- Analyzed and plotted **feature importances**
 - Compared which features were considered important by each model
-- Explored how ensemble methods improve robustness by combining multiple learners
+- Created a model comparison table
+- Explored how ensemble methods improve prediction performance
 
 ### 🧠 Random Forest vs XGBoost
 
-**Random Forest** builds many decision trees independently using randomness in samples and features, then combines their predictions. **XGBoost** builds trees sequentially, where each new tree focuses on correcting the errors made by previous trees. Random Forest generally emphasizes reducing variance through averaging, while XGBoost uses boosting to progressively improve model performance.
+**Random Forest** builds many decision trees independently using randomness in samples and features, then combines their predictions.
 
-📓 **Notebook:** [Random Forest vs XGBoost](https://github.com/haiderriaz1947/neurofive-ml-track/blob/main/Ensemble%20Learning%20-%20Random%20Forest%20vs%20XGBoost.ipynb)
+**XGBoost** builds trees sequentially, where each new tree focuses on correcting the errors made by previous trees.
+
+Random Forest mainly reduces variance through averaging, while XGBoost uses boosting to progressively improve the model.
+
+📓 **Notebook:**
+
+[Random Forest vs XGBoost](https://github.com/haiderriaz1947/neurofive-ml-track/blob/main/Ensemble%20Learning%20-%20Random%20Forest%20vs%20XGBoost.ipynb)
 
 ### 📊 Model Comparison
 
@@ -159,7 +169,11 @@ The second Week 4 task explored **ensemble learning**, comparing powerful tree-b
 
 # ⚖️ Week 5: Handling Imbalanced & Messy Real-World Data
 
-Week 5 focused on an important real-world ML challenge: **imbalanced datasets**. The goal was to understand why accuracy alone can be misleading and how models can be improved when the target classes are unevenly distributed.
+Week 5 focused on an important real-world Machine Learning challenge: **imbalanced datasets**.
+
+The goal was to understand why accuracy alone can be misleading and how models can be improved when target classes are unevenly distributed.
+
+---
 
 ## 💳 Task 1: Credit Card Fraud Detection — Imbalanced Data
 
@@ -168,7 +182,7 @@ For this task, I worked on a **Credit Card Fraud Detection** problem and investi
 ### 🔍 What I Did
 
 - Checked and visualized the target class distribution
-- Identified the severe class imbalance in fraud detection
+- Identified severe class imbalance
 - Applied techniques for handling imbalanced data
 - Retrained the model using a balanced approach
 - Compared **Precision, Recall and F1-score** before and after handling imbalance
@@ -176,21 +190,25 @@ For this task, I worked on a **Credit Card Fraud Detection** problem and investi
 
 ### 💡 Key Learning
 
-> **In highly imbalanced classification problems, a high accuracy score does not necessarily mean the model is useful. Precision, Recall and F1-score provide a much better view of minority-class performance.**
+> **In highly imbalanced classification problems, a high accuracy score does not necessarily mean the model is useful. Precision, Recall and F1-score provide a better view of minority-class performance.**
 
-📓 **Notebook:** [Fraud Detection — Imbalanced Data](https://github.com/haiderriaz1947/neurofive-ml-track/blob/main/Fraud%20Detection-Imbalanced.ipynb)
+📓 **Notebook:**
+
+[Fraud Detection — Imbalanced Data](https://github.com/haiderriaz1947/neurofive-ml-track/blob/main/Fraud%20Detection-Imbalanced.ipynb)
 
 ---
 
 ## 🌐 Task 2: Deploying a Machine Learning Model as a Web App
 
-The next step was turning a trained ML model into something users can actually interact with. I developed a **Streamlit web application** for the Customer Churn prediction model.
+The next step was turning a trained ML model into something users can actually interact with.
+
+I developed a **Streamlit web application** for the Customer Churn prediction model.
 
 ### 🚀 What I Did
 
-- Saved the trained ML model using **joblib**
+- Saved the trained ML model using **Joblib**
 - Built a user-friendly **Streamlit** interface
-- Added input fields for the required customer features
+- Added input fields for customer features
 - Added a **Predict** button
 - Loaded the saved model inside the application
 - Displayed the churn prediction to the user
@@ -198,7 +216,7 @@ The next step was turning a trained ML model into something users can actually i
 
 ### 🔴 Live App
 
-👉 **[Open the NeuroFive Churn Prediction App](https://neurofive-ml-track-churn011.streamlit.app/)**
+👉 [Open the NeuroFive Churn Prediction App](https://neurofive-ml-track-churn011.streamlit.app/)
 
 ### 📌 Key Learning
 
@@ -227,31 +245,3 @@ Week 5
 🌐 Deploying ML as a Web App
        ↓
 🚀 More ML Projects Ahead
-```
-
----
-
-# 🧰 Tools & Technologies
-
-- 🐍 **Python**
-- 🐼 **Pandas**
-- 🔢 **NumPy**
-- 📊 **Matplotlib & Seaborn**
-- 🤖 **Scikit-learn**
-- 🌲 **Random Forest**
-- 🚀 **XGBoost**
-- ⚙️ **Scikit-learn Pipelines & ColumnTransformer**
-- ⚖️ **Imbalanced Learning**
-- 💾 **Joblib**
-- 🌐 **Streamlit**
-- 📓 **Jupyter Notebook**
-
----
-
-# 🎯 Current Focus
-
-I am continuing to strengthen my Machine Learning foundation by moving through the complete workflow:
-
-**Data Understanding → EDA → Feature Engineering → Model Building → Evaluation → Ensemble Learning → Handling Real-World Data → Deployment**
-
-The goal is to move beyond simply training models and learn how to build **reliable, reusable and practical Machine Learning solutions**.
